@@ -1,3 +1,6 @@
+from fenics import *
+from mshr import *
+
 ## Time
 t       = 0
 T       = 0.1e2
