@@ -1,3 +1,9 @@
+from fenics import *
+from mshr import *
+
+from gradient_flows_order_parameters_mechanics import parameters_free_incompressible as P
+
+
 # mesh
 mesh0 = RectangleMesh(Point(P.L,P.L),Point(P.H,P.H),P.Nx,P.Ny,diagonal="right")
 
