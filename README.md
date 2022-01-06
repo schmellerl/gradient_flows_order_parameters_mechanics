@@ -9,9 +9,11 @@ Schmeller, L. & Peschka, D. (2021). arXiv:XXXX.YYYY
 
 DOI:
 
-<h3>Example Intro</h3>
+<h3>1. Introductory Example</h3>
 
-view [Example_Intro.ipynb](colab/Example_Intro.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/schmellerl/gradient_flows_order_parameters_mechanics/blob/main/colab/Example_Intro.ipynb)
+In this introductory example (Section 4.1 in the paper) we examine general aspects of gradient flow discretizations. More details concerning the abstract discretization strategy of gradient flows can be found in the paper. Documentation on the discretization using the *Unified Form Language* (UFL) and FEniCS can be found here: [fenicsproject.org](https://fenicsproject.org).
+
+View documented notebook [Example_Intro.ipynb](colab/Example_Intro.ipynb) or PLAIN PYTHON SCRIPT or open in Google Colab. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/schmellerl/gradient_flows_order_parameters_mechanics/blob/main/colab/Example_Intro.ipynb)
 
 1 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/schmellerl/gradient_flows_order_parameters_mechanics/blob/main/colab/Example1.ipynb)
 
