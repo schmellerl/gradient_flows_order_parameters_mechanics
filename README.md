@@ -15,15 +15,15 @@ In this introductory example (Section 4.1 in the paper) we examine general aspec
 
 View documented notebook [Example_Intro.ipynb](colab/Example_Intro.ipynb) or PLAIN PYTHON SCRIPT or open in Google Colab. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/schmellerl/gradient_flows_order_parameters_mechanics/blob/main/colab/Example_Intro.ipynb)
 
-<h3>2. Phase separation and gels with dynamic elasticity (Darcy)</h3>
+<h3>2. Phase separation and gels with Dary dissipation </h3>
 
- In this example (Section 4.2 in the paper) we invesigate... 
+In this example (Section 4.2 in the paper) we present Phase separation using a Flory-Huggins potential on a circular domain. We introduce constraints to the problem using a Lagrange multiplier.
   
 View documented notebook [Example2.ipynb](colab/Example2.ipynb) or PLAIN PYTHON SCRIPT or open in Google Colab. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/schmellerl/gradient_flows_order_parameters_mechanics/blob/main/colab/Example2.ipynb)
 
-<h3>2.Multiphase systems with dynamic elasticity (Stokes)</h3>
+<h3>2.Multiphase systems with Stokes dissipation </h3>
 
-In this example (Section 4.3 in the paper) we invesigate... 
+In this example (Section 4.3 in the paper) we show a three phase system using two phase field parameters. 
   
 View documented notebook [Example3.ipynb](colab/Example3.ipynb) or PLAIN PYTHON SCRIPT or open in Google Colab. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/schmellerl/gradient_flows_order_parameters_mechanics/blob/main/colab/Example3.ipynb)
 
