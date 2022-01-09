@@ -7,8 +7,6 @@ Schmeller, L. & Peschka, D. (2021). arXiv:XXXX.YYYY
 
 **Abstract:** We construct the formal gradient flow structure for phase field evolution coupled to mechanics in Lagrangian coordinates, present common ways to couple the evolution and discuss general incremental minimization strategies. While the usual presentation of continuum mechanics is intentionally very brief, the focus of this paper is on an extensible functional analytical framework and a discretization approach that preserves an appropriate variational structure as much as possible. As examples, we first present phase separation and swelling of gels and then the approach of stationary states of multiphase systems with surface tension and show the robustness of the general approach.
 
-DOI:
-
 <h3>1. Introductory Example</h3>
 
 In this introductory example (Section 4.1 in the paper) we examine general aspects of gradient flow discretizations. More details concerning the abstract discretization strategy of gradient flows can be found in the paper. Documentation on the discretization using the *Unified Form Language* (UFL) and FEniCS can be found here: [fenicsproject.org](https://fenicsproject.org).
