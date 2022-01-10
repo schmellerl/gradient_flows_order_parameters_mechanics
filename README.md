@@ -11,18 +11,18 @@ Schmeller, L. & Peschka, D. (2021). [10.20347/WIAS.PREPRINT.2909](http://dx.doi.
 
 In this introductory example (Section 4.1 in the paper) we examine general aspects of gradient flow discretizations. More details concerning the abstract discretization strategy of gradient flows can be found in the paper. Documentation on the discretization using the *Unified Form Language* (UFL) and FEniCS can be found here: [fenicsproject.org](https://fenicsproject.org).
 
-View documented notebook [Example_Intro.ipynb](colab/Example_Intro.ipynb) or PLAIN PYTHON SCRIPT or open in Google Colab. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/schmellerl/gradient_flows_order_parameters_mechanics/blob/main/colab/Example_Intro.ipynb)
+View documented notebook [Example_Intro.ipynb](colab/Example_Intro.ipynb) or open in Google Colab. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/schmellerl/gradient_flows_order_parameters_mechanics/blob/main/colab/Example_Intro.ipynb)
 
 <h3>2. Phase separation and gels with Dary dissipation </h3>
 
 In this example (Section 4.2 in the paper) we present Phase separation using a Flory-Huggins potential on a circular domain. We introduce constraints to the problem using a Lagrange multiplier.
   
-View documented notebook [Example2.ipynb](colab/Example2.ipynb) or PLAIN PYTHON SCRIPT or open in Google Colab. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/schmellerl/gradient_flows_order_parameters_mechanics/blob/main/colab/Example2.ipynb)
+View documented notebook [Example2.ipynb](colab/Example2.ipynb) or open in Google Colab. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/schmellerl/gradient_flows_order_parameters_mechanics/blob/main/colab/Example2.ipynb)
 
 <h3>2.Multiphase systems with Stokes dissipation </h3>
 
 In this example (Section 4.3 in the paper) we show a three phase system using two phase field parameters. 
   
-View documented notebook [Example3.ipynb](colab/Example3.ipynb) or PLAIN PYTHON SCRIPT or open in Google Colab. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/schmellerl/gradient_flows_order_parameters_mechanics/blob/main/colab/Example3.ipynb)
+View documented notebook [Example3.ipynb](colab/Example3.ipynb) or open in Google Colab. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/schmellerl/gradient_flows_order_parameters_mechanics/blob/main/colab/Example3.ipynb)
 
 
