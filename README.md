@@ -3,7 +3,7 @@
 
 FENICS implementation of the examples from
 
-Schmeller, L. & Peschka, D. (2021). arXiv:XXXX.YYYY
+Schmeller, L. & Peschka, D. (2021). [10.20347/WIAS.PREPRINT.2909](http://dx.doi.org/10.20347/WIAS.PREPRINT.2909)
 
 **Abstract:** We construct the formal gradient flow structure for phase field evolution coupled to mechanics in Lagrangian coordinates, present common ways to couple the evolution and discuss general incremental minimization strategies. While the usual presentation of continuum mechanics is intentionally very brief, the focus of this paper is on an extensible functional analytical framework and a discretization approach that preserves an appropriate variational structure as much as possible. As examples, we first present phase separation and swelling of gels and then the approach of stationary states of multiphase systems with surface tension and show the robustness of the general approach.
 
