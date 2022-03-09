@@ -1,4 +1,4 @@
-def Neumann_construction(theta_in_liquid, theta_in_solid, gamma_sa ) 
+def Neumann_construction(theta_in_liquid, theta_in_solid, gamma_sa ):
 
   gamma_sa  = 23e-3 # N/m
   
