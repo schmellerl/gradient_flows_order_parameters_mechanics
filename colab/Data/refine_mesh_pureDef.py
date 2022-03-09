@@ -10,7 +10,7 @@ def refine_mesh_pureDef(mesh,W,S,q,eps,h0,h1,interface_factor,H1):
     v,  pp1= split(q)
 
     psi11 = Expression(("tanh(ff*(h0-x[1])/eps)"),eps=eps,h0=h0,h1=h1,ff=interface_factor,degree=2)
-    psi22 = Expression(("-1 + 2*(1+tanh(ff*(x[1]/h0-h0)/eps))*(1+tanh(ff/eps*(h1-pow(pow((x[0])/h0-LL/2,2.0)+pow(x[1]/h0-h0,2.0),0.5))))/4"),eps=eps,h0=h0,h1=h1,LL=H1,ff=interface_factor,degree=2)
+    psi22 = Expression(("-1 + 2*(1+tanh(ff*(x[1]/h0-h0)/eps))*(1+tanh(ff/eps*(h1-pow(pow((x[0])/h0-H1/2,2.0)+pow(x[1]/h0-h0,2.0),0.5))))/4"),eps=eps,h0=h0,h1=h1,H1=H1,ff=interface_factor,degree=2)
     
     psi1 = interpolate(psi11, S)
     psi2 = interpolate(psi22, S)
