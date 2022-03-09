@@ -59,4 +59,4 @@ def refine_mesh_pureDef(mesh,W,S,q,eps,h0,h1,interface_factor,H1):
     psi1 = interpolate(psi11, S)
     psi2 = interpolate(psi22, S)
 
-    return bc, W, S, mesh 
+    return bc, W, S, P2, mesh, psi1, psi2
