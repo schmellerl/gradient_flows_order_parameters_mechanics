@@ -1,3 +1,8 @@
+from    fenics import *
+import  numpy as np
+import ufl
+import dolfin
+
 def refine_mesh_pureDef(mesh,W,S,q,eps,h0,h1,interface_factor,H1):
     
     ep = 0.12*4
