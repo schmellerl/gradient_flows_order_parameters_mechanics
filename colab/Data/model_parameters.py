@@ -15,8 +15,10 @@ gamma3  = 2.24     # surface tension air
 m       = 1e-6     # Cahn-Hilliard mobility
 mu      = 1        # Solid Stokes viscosity 
 
-h0T     = 1        # substrate height 
-h1T     = 0.36     # fluid height
+h0      = 1        # substrate height 
+h1      = 0.36     # fluid height
+
+H1      = 2
 
 eps     = 0.5e-2   # interface width
 
