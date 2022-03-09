@@ -52,4 +52,4 @@ def refine_mesh(mesh,VxUxR,Vpsi,q):
 
     bc = [DirichletBC(VxUxR.sub(0),  Constant((0, 0)), 'on_boundary')]
     
-    return bc, VxUxR, Vpsi, mesh
+    return bc, VxUxR, Vpsi, Vu, mesh
