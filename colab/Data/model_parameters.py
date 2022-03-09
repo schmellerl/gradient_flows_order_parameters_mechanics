@@ -20,7 +20,7 @@ h1      = 0.36     # fluid height
 
 H1      = 2
 
-eps     = 0.5e-2   # interface width
+eps     = 0.02   # interface width
 
 interface_factor =  Constant(1.0/sqrt(2))
 
