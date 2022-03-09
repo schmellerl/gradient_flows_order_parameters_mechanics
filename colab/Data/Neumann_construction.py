@@ -1,3 +1,5 @@
+import numpy as np
+
 def Neumann_construction(theta_in_liquid, theta_in_solid, gamma_sa ):
 
   theta_in_liquid = theta_in_liquid*pi/180   
