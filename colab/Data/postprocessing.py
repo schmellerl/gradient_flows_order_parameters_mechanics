@@ -1,4 +1,5 @@
 from IPython.display import HTML, display
+from fenics import *
 from mshr import *
 
 def progress(value, max=100):
