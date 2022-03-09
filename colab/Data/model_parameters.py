@@ -1,3 +1,8 @@
+from    fenics import *
+import  numpy as np
+import ufl
+import dolfin
+
 # model parameters (non dim)
 G1    = 1          # elastic modulus solig
 G2    = 0.03       # elastic modulus liquid
