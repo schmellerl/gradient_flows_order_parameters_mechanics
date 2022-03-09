@@ -52,4 +52,7 @@ def refine_mesh_pureDef(mesh,W,S,q,eps,h0,h1,interface_factor,H1):
     # Boundary
     bc = [DirichletBC(W.sub(0),  Constant((0, 0)), 'on_boundary')]
 
+    psi1 = interpolate(psi11, S)
+    psi2 = interpolate(psi22, S)
+
     return bc, W, S, mesh 
