@@ -14,13 +14,13 @@ def progress(value, max=100):
         </progress>
     """.format(value=value, max=max))
 
-def output_mesh(mesh):
+def output_mesh(mesh,filepath):
     File(filepath + "mesh.xml") << mesh
 
-def output_mesh1(mesh1):
+def output_mesh1(mesh1,filepath):
     File(filepath + "mesh1.xml") << mesh1
 
-def output_solution(q,n,t=0):
+def output_solution(q,n,mesh,P2,psi1,psi2,t=0):
     File(filepath + "u"+str(n)+".xml")    << project(q.sub(0),FunctionSpace(mesh,P2)) 
     File(filepath + "psi1"+str(n)+".xml") << psi1
     File(filepath + "psi2"+str(n)+".xml") << psi2
