@@ -1,3 +1,8 @@
+from    fenics import *
+import  numpy as np
+import ufl
+import dolfin
+
 def refine_mesh(mesh,VxUxR,Vpsi,q):
     
     ep = 0.12*4
