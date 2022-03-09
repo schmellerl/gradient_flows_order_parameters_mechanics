@@ -45,6 +45,10 @@ def refine_mesh_pureDef(mesh,W,S,q,eps,h0,h1,interface_factor,H1):
                             
     mesh = refine(mesh, cell_markers)
     
+    P2        = VectorElement("P", mesh.ufl_cell(), 1)
+    P1        = FiniteElement("P", mesh.ufl_cell(), 1)
+    R         = FiniteElement("P", mesh.ufl_cell(), 1)   
+    
     TH = MixedElement([P2,R])  
     W = FunctionSpace(mesh, TH)
     S = FunctionSpace(mesh, P1)
