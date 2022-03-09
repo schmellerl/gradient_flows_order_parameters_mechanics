@@ -1,4 +1,4 @@
-def mesh_space(mesh,VxUxR,Vpsi,q):
+def refine_mesh(mesh,VxUxR,Vpsi,q):
     
     ep = 0.12*4
     
