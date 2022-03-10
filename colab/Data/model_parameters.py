@@ -24,4 +24,9 @@ eps     = 0.01   # interface width
 
 interface_factor =  Constant(1.0/sqrt(2))
 
-
+def GshearF(psi1,psi2):
+    psi3 = -1-psi1-psi2
+    xi1 = (1+psi1)/2
+    xi2 = (1+psi2)/2
+    xi3 = (1+psi3)/2
+    return  (xi1*G1 + xi2*G2 + xi3*G3)
