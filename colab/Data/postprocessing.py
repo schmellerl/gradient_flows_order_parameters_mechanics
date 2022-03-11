@@ -21,9 +21,7 @@ def output_mesh1(mesh1,filepath):
     File(filepath + "mesh1.xml") << mesh1
 
 def output_solution(q,n,mesh,Vu,Vpsi,filepath,t=0):
-    u, psi1, psi2, *_ = q.split()
-
     File(filepath + "u"+str(n)+".xml")      << project(q.sub(0),FunctionSpace(mesh,Vu)) 
     File(filepath + "psi1"+str(n)+".xml")   << project(q.sub(1),FunctionSpace(mesh,Vpsi))
     File(filepath + "psi2"+str(n)+".xml")   << project(q.sub(2),FunctionSpace(mesh,Vpsi))
-    #File(filepath + "solid"+str(n)+".xml")  << project(q.sub(0), V_solid)
+    File(filepath + "p"+str(n)+".xml")    << project(q.sub(5),FunctionSpace(mesh,Vpsi)) 
