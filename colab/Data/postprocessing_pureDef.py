@@ -22,5 +22,6 @@ def output_mesh1(mesh1,filepath):
 
 def output_solution(q,n,mesh,P2,psi1,psi2,filepath,t=0):
     File(filepath + "u"+str(n)+".xml")    << project(q.sub(0),FunctionSpace(mesh,P2)) 
+    File(filepath + "p"+str(n)+".xml")    << project(q.sub(1),FunctionSpace(mesh,P1)) 
     File(filepath + "psi1"+str(n)+".xml") << psi1
     File(filepath + "psi2"+str(n)+".xml") << psi2
