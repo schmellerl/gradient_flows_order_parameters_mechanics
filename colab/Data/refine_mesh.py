@@ -50,6 +50,31 @@ def refine_mesh(mesh,VxUxR,Vpsi,q):
      
     VxUxR = FunctionSpace(mesh, TH)
 
-    bc = [DirichletBC(VxUxR.sub(0),  Constant((0, 0)), 'on_boundary')]
+    #bc = [DirichletBC(VxUxR.sub(0),  Constant((0, 0)), 'on_boundary')]
+    noslip = Constant((0, 0)) 
+    noslip1d = Constant((0))
+    def boundary_bot1(x, on_boundary1):
+        tol = 1E-14
+        return on_boundary1 and near(x[0], 0, tol)
+
+    def boundary_bot2(x, on_boundary2):
+        tol = 1E-14
+        return on_boundary2 and near(x[1], 0, tol)
+
+    def boundary_bot3(x, on_boundary3):
+        tol = 1E-14
+        return on_boundary3 and near(x[0], 2, tol)
+
+    def boundary_bot4(x, on_boundary4):
+        tol = 1E-14
+        return on_boundary4 and near(x[1], 2, tol)
+
+
+    bc1   = DirichletBC(VxUxR.sub(0).sub(0),  noslip1d, boundary_bot1)
+    bc2   = DirichletBC(VxUxR.sub(0),         noslip, boundary_bot2)
+    bc3   = DirichletBC(VxUxR.sub(0).sub(0),  noslip1d, boundary_bot3)
+    bc4   = DirichletBC(VxUxR.sub(0),         noslip, boundary_bot4)
+
+    bc = [bc1,bc2,bc3,bc4]
     
     return bc, VxUxR, Vpsi, Vu, mesh
