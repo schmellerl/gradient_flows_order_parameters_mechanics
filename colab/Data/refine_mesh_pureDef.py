@@ -54,8 +54,35 @@ def refine_mesh_pureDef(mesh,W,S,q,eps,h0,h1,interface_factor,H1):
     S = FunctionSpace(mesh, P1)
     
     # Boundary
-    bc = [DirichletBC(W.sub(0),  Constant((0, 0)), 'on_boundary')]
+    #bc = [DirichletBC(W.sub(0),  Constant((0, 0)), 'on_boundary')]
+    noslip = Constant((0, 0)) 
+    noslip1d = Constant((0))
 
+    def boundary_bot1(x, on_boundary1):
+        tol = 1E-14
+        return on_boundary1 and near(x[0], 0, tol)
+
+    def boundary_bot2(x, on_boundary2):
+        tol = 1E-14
+        return on_boundary2 and near(x[1], 0, tol)
+
+    def boundary_bot3(x, on_boundary3):
+        tol = 1E-14
+        return on_boundary3 and near(x[0], 2, tol)
+
+    def boundary_bot4(x, on_boundary4):
+        tol = 1E-14
+        return on_boundary4 and near(x[1], 2, tol)
+
+
+    bc1   = DirichletBC(W.sub(0).sub(0),  noslip1d, boundary_bot1)
+    bc2   = DirichletBC(W.sub(0),         noslip, boundary_bot2)
+    bc3   = DirichletBC(W.sub(0).sub(0),  noslip1d, boundary_bot3)
+    bc4   = DirichletBC(W.sub(0),         noslip, boundary_bot4)
+
+    bc = [bc1,bc2,bc3,bc4]
+    
+    
     psi1 = interpolate(psi11, S)
     psi2 = interpolate(psi22, S)
 
