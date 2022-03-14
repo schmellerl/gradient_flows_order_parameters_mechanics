@@ -27,4 +27,5 @@ In this example (Section 4.3 in the paper) we show a three phase system using tw
   
 View documented notebook [Example3.ipynb](colab/Example3.ipynb) or open in Google Colab. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/schmellerl/gradient_flows_order_parameters_mechanics/blob/main/colab/Example3.ipynb)
 
+View documented notebook [Three_Phase_Stokes.ipynb](colab/Three_Phase_Stokes.ipynb) or open in Google Colab. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/schmellerl/gradient_flows_order_parameters_mechanics/blob/main/colab/Three_Phase_Stokes.ipynb)
 
