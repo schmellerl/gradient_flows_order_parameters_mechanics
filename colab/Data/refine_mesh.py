@@ -40,15 +40,20 @@ def refine_mesh(mesh,VxUxR,Vpsi,q):
                          
     mesh = refine(mesh, cell_markers)
      
-    Vu    = VectorElement("P", mesh.ufl_cell(), 1) # V_u   = displacements
+    #Vu      = VectorElement("P", mesh.ufl_cell(), 1) # V_u   = displacements
+    Pk      = FiniteElement("Lagrange", mesh.ufl_cell(), -FEu_DEG)
+    B       = FiniteElement("Bubble",   mesh.ufl_cell(), 3)
+    Vu      = VectorElement(NodalEnrichedElement(Pk, B))
+    
     Vpsi  = FiniteElement("P", mesh.ufl_cell(), 1) # V_psi = order-parameter(s)
-    Uu    = VectorElement("P", mesh.ufl_cell(), 1)
     Upsi  = FiniteElement("P", mesh.ufl_cell(), 1) # U     = forces
-    R     = FiniteElement("P", mesh.ufl_cell(), 1) 
-
-    TH    = MixedElement([Vu,Vpsi,Vpsi,Vpsi,Vpsi,R]) # real raum
-     
-    VxUxR = FunctionSpace(mesh, TH)
+    
+    
+    #R       = FiniteElement("P", mesh.ufl_cell(), 1) # Lagrange Multiplier
+    R       = FiniteElement("DG", mesh.ufl_cell(), -FEp_DEG)
+    
+    VxUxR   = FunctionSpace(mesh, MixedElement([Vu,Vpsi,Vpsi,Upsi,Upsi,R]))
+    #Vu      = FunctionSpace(mesh, Pv)
 
     #bc = [DirichletBC(VxUxR.sub(0),  Constant((0, 0)), 'on_boundary')]
     noslip = Constant((0, 0)) 
