@@ -45,13 +45,18 @@ def refine_mesh_pureDef(mesh,W,S,q,eps,h0,h1,interface_factor,H1):
                             
     mesh = refine(mesh, cell_markers)
     
-    P2        = VectorElement("P", mesh.ufl_cell(), 1)
-    P1        = FiniteElement("P", mesh.ufl_cell(), 1)
-    R         = FiniteElement("P", mesh.ufl_cell(), 1)   
+    #P2        = VectorElement("P", mesh.ufl_cell(), 1)
+    Pk      = FiniteElement("Lagrange", mesh.ufl_cell(), -FEu_DEG)
+    B       = FiniteElement("Bubble",   mesh.ufl_cell(), 3)
+    P2      = VectorElement(NodalEnrichedElement(Pk, B))
     
-    TH = MixedElement([P2,R])  
-    W = FunctionSpace(mesh, TH)
-    S = FunctionSpace(mesh, P1)
+    P1        = FiniteElement("P", mesh.ufl_cell(), 1)
+    #R         = FiniteElement("P", mesh.ufl_cell(), 1)    
+    R       = FiniteElement("DG", mesh.ufl_cell(), -FEp_DEG)
+    
+    TH        = MixedElement([P2,R]) 
+    W         = FunctionSpace(mesh, TH)
+    S         = FunctionSpace(mesh, P1)
     
     # Boundary
     #bc = [DirichletBC(W.sub(0),  Constant((0, 0)), 'on_boundary')]
