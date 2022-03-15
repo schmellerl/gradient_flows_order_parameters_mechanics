@@ -39,7 +39,10 @@ def refine_mesh(mesh,VxUxR,Vpsi,q):
             cell_markers[cell] = True
                          
     mesh = refine(mesh, cell_markers)
-     
+    
+    FEu_DEG = -2
+    FEp_DEG = -1
+ 
     #Vu      = VectorElement("P", mesh.ufl_cell(), 1) # V_u   = displacements
     Pk      = FiniteElement("Lagrange", mesh.ufl_cell(), -FEu_DEG)
     B       = FiniteElement("Bubble",   mesh.ufl_cell(), 3)
