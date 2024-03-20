@@ -3,7 +3,7 @@
 
 FENICS implementation of the examples from
 
-Schmeller, L. & Peschka, D. (2022). [10.20347/WIAS.PREPRINT.2909](http://dx.doi.org/10.20347/WIAS.PREPRINT.2909)
+Schmeller, L. & Peschka, D. (2022).  [10.1137/22M148478X ](https://doi.org/10.1137/22M148478X)
 
 supplementary simulation data available at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5832662.svg)](https://doi.org/10.5281/zenodo.5832662)
 
